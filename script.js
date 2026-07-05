@@ -50,3 +50,39 @@ if (skillsBox) {
   observer.observe(skillsBox);
 }
 
+
+// contact //
+const form = document.querySelector(".contact-form");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const btn = form.querySelector("button");
+
+    btn.textContent = "Sending...";
+    btn.disabled = true;
+
+    emailjs.sendForm(
+        "service_bxf8slj",
+        "template_gaxqru9",
+        form
+    )
+    .then(() => {
+        btn.textContent = "Message Sent ✓";
+        form.reset();
+        alert("✅ Your message has been sent successfully. I'll get back to you as soon as possible.");
+
+        setTimeout(() => {
+            btn.textContent = "Send Message";
+            btn.disabled = false;
+        }, 2000);
+    })
+    .catch((error) => {
+        console.error(error);
+
+        btn.textContent = "Send Message";
+        btn.disabled = false;
+
+        alert("Failed to send message.");
+    });
+});

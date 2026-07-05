@@ -49,8 +49,7 @@
                     <h1>Hi, i'm <span class="accent"> Unyah Idongesit </span></h1>
                     <div class="text-animate">
                         <h3>Front-End Developer</h3>
-                        <p>I build fast, responsive interfaces with clean code and eye‑catching
-                        design.</p>
+                        <p>I build fast, responsive interfaces with clean code and eye‑catching design.</p>
 
                         <div class="btn-box">
                             <a href="#contact" class="btn btn--outline">Hire Me</a>
@@ -262,9 +261,9 @@
     <!--contact-->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="heading">Contact <span class="accent">Me</span></h2>
+            <h2 class="heading">Let's Work<span class="accent">Together</span></h2>
 
-            <form class="contact" action="#" method="post">
+            <form id="contact-form" class="contact-form">
                 <div class="input-box">
                     <label class="input-field">
                         <span class="focus"></span>
@@ -291,7 +290,7 @@
                         <input 
                         type="tel"
                         name="phone" 
-                        placeholder="Mobile Number"
+                        placeholder="Mobile Number (Optional)"
                         pattern="[0-9]{11}" />
                     </label>
 
@@ -299,8 +298,9 @@
                         <span class="focus"></span>
                         <input 
                         type="text"
-                        name="Subject" 
-                        placeholder="Subject" />
+                        name="subject" 
+                        placeholder="Subject" 
+                        required />
                     </label>
                 </div>
 
@@ -309,13 +309,12 @@
                     <textarea 
                         name="message" 
                         rows="6" 
-                        placeholder="Your Message" 
-                        required>
-                    </textarea>
+                        placeholder="Your Message"
+                        required></textarea>
                 </label>
 
                 <div class="btn-box btns">
-                    <button type="submit" class="btn btn--outline">Submit</button>
+                    <button type="submit" class="btn btn--outline contact-btn">Send Message</button>
                 </div>
             </form>
         </div>
@@ -324,7 +323,7 @@
 <!--footer-->
 <footer class="footer">
     
-    <p>&copy; 2025 leetech - All Right Reserved.</p>
+    <p>&copy; 2024 leetech - All Right Reserved.</p>
 
     <div class="footer_to-top">
         <a href="#"aria-label="Back to top"><i class="fa fa-arrow-up"></i>
@@ -332,6 +331,14 @@
     </div>
     
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+    emailjs.init({
+        publicKey: "nC7PcIl0svUYvEMPl",
+    });
+</script>
 
     <script src="script.js"></script>
 </body>

@@ -969,11 +969,6 @@ section {
 }
 
 
-
-
-
-
-
 /* Mobile nav */
 @media (max-width:1200px) {
     html {
@@ -1185,7 +1180,7 @@ section {
 
 
     .technical {
-        padding-left: 2rem;
+        padding-left: 4rem;
         width: 40rem;
     }
 
@@ -1215,7 +1210,7 @@ section {
     }
 
     .technical {
-        padding-left: 1.5rem;
+        padding-left: 2rem;
         width: 4rem;
     }
 
