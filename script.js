@@ -1,88 +1,206 @@
-//toggle icon bar //
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+// mobile menu //
+const menuIcon = document.querySelector("#menu-icon");
+const navbar = document.querySelector(".navbar");
+const header = document.querySelector("header");
 
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle('bx-x');
-  navbar.classList.toggle('active');
+if(menuIcon && navbar){
+menuIcon.addEventListener("click", (e) => {
+
+    // Prevent the click from reaching the document //
+    e.stopPropagation();
+
+    navbar.classList.toggle("active");
+
+    const icon = menuIcon.querySelector("i");
+
+
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-xmark");
+
+});
+
 }
 
+// Close Mobile Menu When Clicking Outside //
+document.addEventListener("click", (e) => {
 
-//scroll section //
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+    if (
+        navbar.classList.contains("active") &&
+        !navbar.contains(e.target)
+    ) {
 
-window.onscroll = () => {
-  sections.forEach(sec => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 200;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute('id');
+        navbar.classList.remove("active");
 
-    if(top >= offset && top < offset + height) {
-      //active navbar //
-      navLinks.forEach(Links => {
-        Links.classList.remove('active');
-        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-      });
+        const icon = menuIcon.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
     }
-  });
 
-  //remove toggle icon and navbar when click on navlinks
-  menuIcon.classList.remove('bx-x')
-  navbar.classList.remove('active')
-}
+});
 
+//Sticky Header //
+window.addEventListener("scroll", () => {
 
-// skills section //
-const skillsBox = document.querySelector('.skills-box');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
+    if (window.scrollY > 100) {
+        header.style.background = "rgba(2, 6, 23, .92)";
+        header.style.backdropFilter = "blur(18px)";
+        header.style.boxShadow = "0 10px 30px rgba(0, 0, 0, .35)";
+    } else {
+        header.style.background = "rgba(2, 6, 23, .65)";
+        header.style.boxShadow = "none";
     }
-  });
-}, { threshold: 0.3 });
+});
 
-if (skillsBox) {
-  observer.observe(skillsBox);
-}
+// Active Navigation Link //
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar a");
 
+window.addEventListener("scroll", () => {
 
-// contact //
-const form = document.querySelector(".contact-form");
+    let current = "";
+    
+    sections.forEach(section => {
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
+        const sectionTop = section.offsetTop - 150;
 
-    const btn = form.querySelector("button");
+        const sectionHeight = section.offsetHeight;
 
-    btn.textContent = "Sending...";
-    btn.disabled = true;
+        if (
+            pageYOffset >= sectionTop && 
+            pageXOffset < sectionTop + sectionHeight
+        ) {
+            current = section.getAttribute("id");
+        }
 
-    emailjs.sendForm(
-        "service_bxf8slj",
-        "template_gaxqru9",
-        form
-    )
-    .then(() => {
-        btn.textContent = "Message Sent ✓";
-        form.reset();
-        alert("✅ Your message has been sent successfully. I'll get back to you as soon as possible.");
-
-        setTimeout(() => {
-            btn.textContent = "Send Message";
-            btn.disabled = false;
-        }, 2000);
-    })
-    .catch((error) => {
-        console.error(error);
-
-        btn.textContent = "Send Message";
-        btn.disabled = false;
-
-        alert("Failed to send message.");
     });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+
+});
+
+// Scroll Reveal Animation //
+const revealElements = document.querySelectorAll(".service-box, .skill-card, .project-box, .experience div, .contact form, .contact-text");
+
+const revealOnScroll = () => {
+
+    revealElements.forEach(element => {
+
+    const windowHeight = window.innerHeight;
+    const elementTop = element.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+
+        element.classList.remove("hidden");
+        element.classList.add("show");
+    }
+
+    });
+
+};
+
+// Initial Styles //
+revealElements.forEach(element => {
+    element.classList.add("hidden");
+});
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
+
+
+// Contact form //
+const form = document.querySelector("form");
+
+if(form) {
+    form.addEventListener("submit", function (e) {
+
+    e.preventDefault ();
+
+    alert("✅ Message Sent Successfully We'll get back to you shortly.");
+
+    form.reset();
+    });
+
+}
+
+
+// Read More //
+const readMoreBtns = document.querySelectorAll(".readMoreBtn");
+readMoreBtns.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const currentBox = this.closest(".service-box");
+        const currentDots = currentBox.querySelector(".dots");
+        const currentMore = currentBox.querySelector(".more");
+
+        // close every other card //
+        document.querySelectorAll(".service-box").forEach(box => {
+            if (box !== currentBox) {
+                box.querySelector(".more").classList.remove("show");
+                box.querySelector(".dots").style.display = "inline";
+                box.querySelector(".readMoreBtn").textContent = "Read More"
+            }
+        })
+
+
+        //toggle the current card //
+        if (currentMore.classList.contains("show")) {
+            currentMore.classList.remove("show");
+            currentDots.style.display = "inline";
+            this.textContent = "Read More";
+        } else {
+            currentMore.classList.add("show");
+            currentDots.style.display = "none";
+            this.textContent  = "Read Less";
+        }
+    })
+});
+
+
+// Back To Top Button //
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 400) {
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+
+});
+
+// Scroll Progress Indicator //
+const scrollProgress = document.querySelector(".scroll-progress");
+
+window.addEventListener("scroll", () => {
+
+    const scrollTop = window.scrollY;
+
+    const docHeight =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+    const progress = (scrollTop / docHeight) * 100;
+
+    scrollProgress.style.width = progress + "%";
+
+});
+
+// Preloader //
+window.addEventListener("load", () => {
+
+    const preloader = document.getElementById("preloader");
+
+    preloader.classList.add("hide");
+
 });

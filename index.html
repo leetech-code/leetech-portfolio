@@ -3,343 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <!--icon link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-
     <title>portfolio</title>
+    <!--fav-icon-->
+     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <!--Font-Awesome-->
+    <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <!--header-->
-    <header class="header" id="top">
-        <div class="container header-content">
-            <div class="brand">
-                <img src="/image/logo2.png" alt="brand_logo">
-                        <a href="#home" class="brand_text">leetech</a>
-            </div>
+    <div class="scroll-progress"></div>
 
-                 <!--hamburger icon-->
-            <div class='bx  bx-menu' id="menu-icon" aria-label="Toggle navigation"></div>
+    <div id="preloader">
+        <div class="loader">
+            <span>leeTech</span>
+        </div>
+    </div>
+    <!--Header-->
+    <header class="header">
+        <a href="#" class="logo">portfolio</a>
 
-            <!--main nav-->
-            <nav class="navbar" aria-label="main">  
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#resume">Resume</a>
-                <a href="#skills">Skills</a>
-                <a href="#project">Projects</a>
-                <a href="#contact">Contact</a>
-                <span class="active-nav" aria-hidden="true"></span>
-            </nav>
-        </div> 
+        <nav class="navbar">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div id="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
-    <!--Home-->
-    <section id="home" class="home">
-        <div class="container">
-            <div class="home_content">
-        
-                <div class="homeImage">
-                    <img src="/image/about.png" alt="profile image">
-                </div>
-
-                <div class="home_text">
-                    <h1>Hi, i'm <span class="accent"> Unyah Idongesit </span></h1>
-                    <div class="text-animate">
-                        <h3>Front-End Developer</h3>
-                        <p>I build fast, responsive interfaces with clean code and eye‑catching design.</p>
-
-                        <div class="btn-box">
-                            <a href="#contact" class="btn btn--outline">Hire Me</a>
-                            <a href="#contact" class="btn btn--outline">Contact Me</a>
-                        </div>
-                    </div>
-
-
-                    <!-- Social links -->
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i>
-                        <a href="#"><i class="fab fa-linkedin"></i>
-                        <a href="#"><i class="fab fa-twitter"></i>
-                        <a href="#"><i class="fab fa-instagram"></i>
-                    </div>
-                </div>
+    <!--hero section-->
+    <section class="home" id="home">
+       <div class="home-content">
+            <h3>Hi, I am</h3>
+            <h1>Unyah Idongesit(leeTech)</h1>
+            <h2>Project Designer <br> and Developer</h2>
+            <p>With 2+ years experience in the tech world</p>
+            <div class="btn-box">
+                <a href="#contact">Hire Me</a>
+                <a href="#contact">Contact</a>
             </div>
-        </div>
-    </section>
+       </div>
 
-    <!--About-->
-    <section id="about" class="about section--alt-bg">
-        <div class="container">
-            <h2 class="heading">
-                About <span class="accent">Me</span>
+       <div class="home-img">
+        <img src="images/hero-img.png">
+       </div>
+    </section>
+    
+    <!--About Section-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/profile.png" alt="Eidongesit Unyah">
+        </div>
+
+        <div class="about-content">
+            <h5>About Me</h5>
+
+            <h2>
+                Passionate Frontend Developer Creating
+                <span>Modern Web Experiences</span>
             </h2>
 
-            <div class="about-wrapper">
-                <figure class="about-img">
-                    <img src="/image/about.png" alt="portrait of Unyah Idongesit" />
-                </figure>
-        
+            <p>
+                I'm a frontend developer dedicated to building responsive, accessible, and visually engaging websites. I enjoy turning ideas into interactive digital experiences using modern web technologies and clean, maintainable code.
+            </p>
 
-                    <div class="about-content">
-                        <h3>Front-End Developer</h3>
-                        <p>Passionate about translating beautiful designs into interactive web
-                        experiences. Adept with modern front‑end tools and a keen eye for
-                        detail.</p>
-                            <div class="btn-box btns">
-                                <a href="#resume" class="btn">Read More</a>
-                            </div>
-                    </div>   
-            </div>
-        </div>
-    </section>
-    
+            <p>
+                My goal is to create websites that not only look great but also deliver exceptional performance, seamless user experiences, and lasting value for businesses and individuals.
+            </p>
 
-    <!--resume-->
-    <section id="resume" class="resume">
-        <div class="container">
-            <h2 class="heading"> Professional <span class="accent">Summary</span></h2>
-            <p class="lead">Creative and versatile Frontend Developer and Graphic Designer with 2 years of 
-                            proven experience building responsive web interfaces, impactful graphics, and strategic 
-                            digital marketing campaigns. Highly skilled in HTML (90%), CSS (90%), JavaScript (75% and improving), 
-                            and modern frameworks like React. Adept at crafting visually engaging designs using Adobe Photoshop, 
-                            Illustrator, and CorelDRAW to strengthen brand presence and drive audience engagement.</p>
+           <div class="about-info">
 
-            <div class="resume_grid">
-                <div class="resume_column">
-                    <h1 class="title">Core Skills</h1> 
-                        <div class="resume_box">
-                            <div class="resume_content">
-                                <div class="content">
-                                    <ul class="skill-list">
-                                        <li><i class="fas fa-check-circle"></i>Html</li>
-                                        <li><i class="fas fa-check-circle"></i>CSS</li>
-
-                                        <li><i class="fas fa-check-circle"></i>JavaScript</li>
-
-                                        <li><i class="fas fa-check-circle"></i>React</li>
-
-                                        <li><i class="fas fa-check-circle"></i>Responsive Web Design</li>
-
-                                        <li><i class="fas fa-check-circle"></i>Cross-Browser Compatibility</li>
-
-                                        <li><i class="fas fa-check-circle"></i>UI/UX Principles</li>
-                                    </ul>
-                                </div>
-                            </div>
-            
-
-             <!--Experience-->
-            <div class="resume_column">
-                <h3 class="title">Professional Experience</h3>
-                <div class="resume_content">
-                    <ul class="experience-list">
-                        <li><i class="fas fa-briefcase"></i>Developed and maintained user-friendly, mobile-responsive 
-                                                            websites using HTML, CSS, JavaScript, and React.</li>
-
-                        <li><i class="fas fa-briefcase"></i>Designed custom graphics, logos, and visual assets for websites 
-                                                            and social media using Adobe Creative Suite and CorelDRAW.</li>
-
-                        <li><i class="fas fa-briefcase"></i>Collaborated with clients to translate ideas into compelling 
-                                                            digital experiences and marketing campaigns.</li>
-
-                        <li><i class="fas fa-briefcase"></i>Improved website performance and user engagement through clean code, 
-                                                            intuitive layouts, and modern design trends.</li>
-
-                        <li><i class="fas fa-briefcase"></i>Supported digital marketing efforts by creating branded content, 
-                                                            email templates, and promotional visuals.</li>
-                    </ul>
+                <div class="info-box">
+                    <h3>🧠 Clean Code</h3>
+                    <span>Writing organized, maintainable, and scalable code using modern frontend practices.</span>
                 </div>
-            </div>
 
-            <!--technical table-->
-            <div class="resume_column technical">
-                <h1 class="title">Technical Proficiency</h1>
-                    <table class="tech-table" aria-label="skill Proficiency table">
-                        <thead>
-                            <tr>
-                                <th>Skill</th>
-                                <th>Proficiency</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr><td>HTML</td><td>90%</td></tr>
-                            <tr><td>CSS</td><td>90%</td></tr>
-                            <tr><td>JavaScript</td><td>75% (improving to 100%)</td></tr>
-                            <tr><td>React</td><td>Intermediate</td></tr>
-                            <tr><td>Adobe Photoshop</td><td>Advanced</td></tr>
-                            <tr><td>Adobe Illustrator</td><td>Advanced</td></tr>
-                            <tr><td>CorelDRAW</td><td>Advanced</td></tr>
-                        </tbody>
-                    </table>
+                <div class="info-box">
+                    <h3>📱 Responsive Design</h3>
+                    <span>Creating websites that adapt beautifully across desktops, tablets, and mobile devices.</span>
                 </div>
+
+                <div class="info-box">
+                    <h3>⚡ Performance</h3>
+                    <span>Optimizing websites for speed, accessibility, and a smooth user experience.</span>
+                </div>
+
             </div>
+            <a href="#contact" class="btn">Let's Talk</a>
         </div>
+
     </section>
 
-    <!--skills-->
-    <section id="skills" class="skills section--alt-bg">
-        <div class="container">
-            <h2 class="heading">My <span class="accent">Skills</span></h2>
+    <!--services-->
+    <section class="services" id="services">
+       <div class="section-title">
+            <h2>What I Can Help You Build</h2>
+            <p>Every successful project starts with understanding your goals. Here's how I transform ideas into fast, responsive, and user-focused websites.</p>
+       </div>
+       
+       <div class="service-container">
 
-            <div class="skills_grid">
-                <div class="skills-text">
-                    <h3 class="title">Technical Skills</h3>
-                    <p>I have developed a strong foundation in web development and design tools through practice and projects. 
-                       Here's a quick overview of my core technical skills</p>
-                </div>
+            <div class="service-box">
+               <i class="fa-solid fa-comments"></i>
+               <h3>Discovery & Planning</h3>
 
-                <div class="skills-box">
-                        <div class="progress">
-                            <h4>Html <span>90%</span></h4>
-                            <div class="bar"><span></span></div>
-                        </div>
+               <p>
+                    Every successful project begins with understanding your goals and identifying the best solution for your business...
 
-                    <div class="progress">
-                        <h4>CSS <span>80%</span></h4>
-                        <div class="bar"><span></span></div>
-                    </div>
+                <span class="dots">....</span>
 
-                    <div class="progress">
-                        <h4>JavaScript <span>75%</span></h4>
-                        <div class="bar"><span></span></div>
-                    </div>
+                <span class="more">
+                    Before writing a single line of code, I take time to understand your objectives, target audience, and brand identity. This planning stage helps create a clear roadmap, ensuring the final product meets your expectations and solves real problems.
+                </span>
+               </p>
 
-                    <div class="progress">
-                        <h4>React <span>75%</span></h4>
-                        <div class="bar"><span></span></div>
-                    </div>
-
-                    <div class="progress">
-                        <h4>Adobe Photoshop <span>90%</span></h4>
-                        <div class="bar"><span></span></div>
-                    </div>
-
-                    <div class="progress">
-                        <h4>Adobe Illustrator <span>80%</span></h4>
-                        <div class="bar"><span></span></div>
-                    </div>
-
-                    <div class="progress">
-                        <h4>CorelDRAW <span>90%</span></h4>
-                        <div class="bar"><span></span></div>
-                    </div>
-                </div>
+               <a href="#" class="readMoreBtn">Read More</a>
             </div>
-        </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <h3>Design & Development</h3>
+                <p>
+                    I design clean, responsive interfaces and develop them using modern frontend technologies...
+
+                   <span class="dots">.....</span>
+
+                   <span class="more">
+                    I focus on writing clean, maintainable code while building interfaces that look great on desktops, tablets, and mobile devices. Every component is created with usability, accessibility, and long-term scalability in mind.
+                   </span>
+                </p>
+                <a href="#" class="readMoreBtn">Read More</a>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Testing & Launch</h3>
+                <p>
+                    Before delivery, every project undergoes thorough testing to ensure quality and performance...
+
+                    <span class="dots">....</span>
+
+                    <span class="more">
+                       I test websites across different browsers and screen sizes, optimize loading speed, and fix usability issues before deployment. This ensures visitors enjoy a fast, reliable, and consistent experience from day one.
+                    </span>
+                </p>
+                <a href="#" class="readMoreBtn">Read More</a>
+            </div>
+       </div>
     </section>
 
-    <!--projects-->
-    <section id="project" class="projects">
-        <div class="container">
-            <h2 class="heading">My <span class="accent">Projects</span></h2>
+    <!--skills section-->
+    <section class="skills">
+       <div class="skills-left">
+            <h2>Skills & Expertise</h2>
+            <p>I build modern web experiences with a focus on performance, usability, and clean code.</p>
 
-            <div class="projects_grid">
-                <!-- Project Card 1 -->
-                <article class="project-card">
-                    <img src="/image/project(2)4.png" alt="Tip CALCULATOR Screenshot">
-                        <div class="project-content">
-                            <h3>Tip Calculator</h3>
-                            <p>A clean, modern calculator for splitting bills and tips.</p>
-                            <small class="project-tech">HTML, CSS, JavaScript</small>
-
-                            <div class="btn-box">
-                                <a href="#" class="btn btn--outline" target="_blank">Live Demo</a>
-                                <a href="https://github.com/grodtlincoln/God-s-Time-Store" class="btn btn--outline" target="_blank">
-                                    GitHub
-                                </a>
-                            </div>
-                        </div>
-                </article>
+            <div class="experience">
+                <div>
+                   <h3>4</h3>
+                   <span>Satisfied Client</span>
+                </div>
             </div>
-        </div>
+       </div>
+
+       <div class="skills-right">
+            <div class="skill-card">
+                <i class="fa-solid fa-code"></i>
+                <div>
+                    <h3>💻 Frontend Development</h3>
+                    <p>Building responsive and interactive websites using HTML5, CSS3, JavaScript, and React while following modern development best practices.</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <div>
+                    <h3>📱 Responsive UI/UX</h3>
+                    <p>Designing interfaces that adapt seamlessly across desktops, tablets, and mobile devices while providing an intuitive user experience.</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <i class="fa-solid fa-gauge-high"></i>
+                <div>
+                    <h3>⚡ Performance & Optimization</h3>
+                    <p>Improving website speed, accessibility, SEO, and overall performance through clean code, optimized assets, and efficient loading techniques.</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <i class="fa-brands fa-github"></i>
+                <div>
+                    <h3>🛠 Version Control Card</h3>
+                    <p>Managing projects efficiently with Git and GitHub to maintain clean workflows and collaboration.</p>
+                </div>
+            </div>
+       </div>
     </section>
 
-    <!--contact-->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="heading">Let's Work<span class="accent">Together</span></h2>
+    <!--Project section-->
+    <section class="projects" id="projects">
+        <div class="section-title">
+            <h2>Featured Projects</h2>
+            <p>A selection of projects that demonstrate my approach to responsive design, clean code, and user-focused development.</p>
+        </div>
 
-            <form id="contact-form" class="contact-form">
-                <div class="input-box">
-                    <label class="input-field">
-                        <span class="focus"></span>
-                        <input 
-                        type="text" 
-                        name="name" 
-                        placeholder="Full Name" 
-                        required />
-                    </label>   
+        <div class="project-container">
+            <div class="project-box">
+                <img src="images/project.png" alt="Online Store">
 
-                    <label class="input-field">
-                        <span class="focus"></span>
-                        <input 
-                        type="email"
-                        name="email" 
-                        placeholder="Email Address" 
-                        required />
-                    </label>
+                <div class="project-overlay">
+                    <span>Frontend Development</span>
+                    <h3>Online Store</h3>
+                    <p> Responsive eCommerce website built with HTML, CSS and JavaScript.</p>
+                    <div class="project-links">
+                        <a href="">Live Demo</a>
+
+                        <a href="https://github.com/leetech-code/" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
+                    </div>
+
                 </div>
 
-                <div class="input-box">
-                    <label class="input-field">
-                        <span class="focus"></span>
-                        <input 
-                        type="tel"
-                        name="phone" 
-                        placeholder="Mobile Number (Optional)"
-                        pattern="[0-9]{11}" />
-                    </label>
+            </div>
 
-                    <label class="input-field">
-                        <span class="focus"></span>
-                        <input 
-                        type="text"
-                        name="subject" 
-                        placeholder="Subject" 
-                        required />
-                    </label>
+            <div class="project-box">
+                <img src="images/project.png" alt="Tip Calculator">
+           
+                <div class="project-overlay">
+                    <span>Frontend Development</span>
+                    <h3>Tips Calculator</h3>
+                    <p>HTML • CSS • JavaScript • Responsive</p>
+
+                    <div class="project-links">
+                        <a href="">Live Demo</a>
+
+                        <a href=""><i class="fa-brands fa-github"></i>Github</a>
+                    </div>
                 </div>
 
-                <label class="textarea-field">
-                    <span class="focus"></span>
-                    <textarea 
-                        name="message" 
-                        rows="6" 
-                        placeholder="Your Message"
-                        required></textarea>
-                </label>
+            </div>
 
-                <div class="btn-box btns">
-                    <button type="submit" class="btn btn--outline contact-btn">Send Message</button>
-                </div>
-            </form>
+        </div>
+
+        <div class="project-btn">
+            <a href="#">Load More</a>
         </div>
     </section>
 
-<!--footer-->
-<footer class="footer">
-    
-    <p>&copy; 2024 leetech - All Right Reserved.</p>
+    <!--contact section-->
+    <section class="contact" id="contact">
+       <div class="contact-text">
+            <h2>Let's Build Something Great</h2>
+            <p>I create responsive websites that are fast, user-friendly, and designed to help businesses establish a strong online presence.</p>
+       </div>
 
-    <div class="footer_to-top">
-        <a href="#"aria-label="Back to top"><i class="fa fa-arrow-up"></i>
-        </i></a>
-    </div>
-    
-</footer>
+       <form>
+            <input type="text"
+            placeholder="Your Name"
+            required>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <input type="email"
+            placeholder="Your Email"
+            required>
 
-<script>
-    emailjs.init({
-        publicKey: "nC7PcIl0svUYvEMPl",
-    });
-</script>
+            <input type="text"
+            placeholder="Subject">
+
+            <textarea rows="7" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send</button>
+       </form>
+    </section>
+
+    <!--footer section-->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Let's Connect</h2>
+            <p>
+                Have a project in mind or just want to say hello?
+                I'd love to hear from you.
+            </p>
+            <a href="mailto:eidongesitunyah@gmail.com" class="footer-email">eidongesitunyah@gmail.com</a>
+
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+
+            <!--footer nav-->
+           <nav class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+           </nav>
+           <div class="footer-bottom">
+                <p>© 2026 idongesit Unyah. All Rights Reserved.</p>
+           </div>
+
+        </div>   
+    </footer>
+    <a href="#home" class="back-to-top" id="backToTop">
+    <i class="fa-solid fa-angles-up"></i></a>
+
+ 
+
+
+
+
+
 
     <script src="script.js"></script>
 </body>
 </html>
+
