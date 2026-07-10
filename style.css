@@ -11,6 +11,8 @@
 
 html {
     font-size: 70.5%;
+    width: 100%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -102,6 +104,7 @@ body {
 
     var(--bg-color);
     color: var(--text-color);
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -160,36 +163,67 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background:rgba(2,6,23,.65);
+    background:rgba(2,6,23,.72);
     backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(255,255,255,.05);
-    backdrop-filter: blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.06);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .18);
     z-index: 1000;
+    transition: .3s ease;
 }
 
 .logo {
-    font-size: 2.8rem;
-    color: var(--text-color);
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: .3s;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    transition: .3s ease;
 }
 
-.logo:hover {
+.logo img {
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+    transition: .35s ease;
+}
+
+.brand {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    letter-spacing: .5px;
+}
+
+.brand span {
     color: var(--main-color);
 }
 
+.logo:hover img {
+    transform: rotate(-6deg) scale(1.08);
+}
+
+.logo:hover .brand {
+    color: var(--main-color);
+}
+
+.logo:hover .brand span {
+    color: #fff;
+}
+
+/* Navbar */
 .navbar {
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 .navbar a {
     position: relative;
     color: var(--text-color);
-    transition: .3s;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: .3s ease;
 }
 
+.navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
 }
@@ -202,14 +236,15 @@ img {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -8px;
+    bottom: -6px;
     width: 0;
     height: 2px;
     background: var(--main-color);
-    transition: .3s;
+    transition: .3s ease;
 }
 
-.navbar a:hover::after {
+.navbar a:hover::after,
+.navbar a.active::after {
     width: 100%;
 }
 
@@ -231,28 +266,100 @@ img {
 
 /* left */
 .home-content {
+    position: relative;
+    z-index: 2;
     flex: 1;
 }
 
 .home-content h3 {
-    font-size: 1.4rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    padding: .8rem 1.8rem;
+    margin-bottom: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--main-color);
+    background: rgba(56, 189, 248, .08);
+    border: 1px solid rgba(56, 189, 248, .2);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    transition: .35s ease;
+}
+
+.home-content h3:hover {
+    background: rgba(56, 189, 248, .15);
+    border-color: var(--main-color);
+    transform: translateY(-2px);
+}
+
+.home-content h3 span{
+    width: 10px;
+    height: 10px;
+    background: var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--main-color);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.4);
+        opacity: .6;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .home-content h1 {
     font-size: 6rem;
     font-weight: 800;
-    line-height: 1.1;
-    margin: 8rem 0;
+    line-height: 1.15;
+    margin: 1.5rem 0;
+    background: linear-gradient(135deg,#ffffff 0%,#bfefff 35%,var(--main-color) 70%,#0ea5e9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 18px rgba(56, 189, 248, .15));
+    letter-spacing: .5px;
+}
+
+.home-content h1 span{
+    color: var(--main-color);
+    -webkit-text-fill-color: var(--main-color);
+    font-size: .75em;
+    font-weight: 700;
 }
 
 .home-content h2 {
     font-size: 4rem;
-    font-weight: 700;
-    line-height: 1.2;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 1rem 0 2.5rem;
+    color: var(--text-color);
+    letter-spacing: .5px;
+}
+
+.home-content h2 span{
     color: var(--main-color);
-    margin: 1rem 0 2rem;
+}
+
+.home-content h2 span::after{
+    content: "";
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--main-color),transparent);
+    border-radius: 10px;
 }
 
 .home-content p {
@@ -264,6 +371,8 @@ img {
 
 /* buttons */
 .btn-box {
+    position: relative;
+    z-index: 3;
     display: flex;
     gap: 2rem;
 }
@@ -306,6 +415,7 @@ img {
     display: flex;
     justify-content: center;
     position: relative;
+    pointer-events: none;
 }
 
 .home-img img {
@@ -313,6 +423,7 @@ img {
     max-width: 460px;
     filter: drop-shadow(0 25px 50px rgba(56, 189, 248, .18));
     z-index: 2;
+    pointer-events: none;
 }
 
 /* Glow Behind Image */
@@ -336,6 +447,11 @@ img {
     filter: blur(80px);
     right: -100px;
     bottom: 20px;
+}
+
+.home::before,
+.home::after {
+    pointer-events: none;
 }
 
 /* Responsiveness */
@@ -369,8 +485,20 @@ img {
 }
 
 @media(max-width: 768px){
+    section {
+        padding: 8rem 5%;
+    }
     #menu-icon {
         display: block;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .brand {
+        font-size: 2.3rem;
     }
 
     .navbar {
@@ -395,7 +523,7 @@ img {
     }
 
     .home-content h2 {
-        font-size: 4.6rem;
+        font-size: 3.2rem;
     }
 
     .home-img img {
@@ -414,6 +542,15 @@ img {
 
     .home-content h1{
         font-size: 3.9rem;
+    }
+
+    .brand {
+        display: none;
+    }    
+
+    .logo img {
+        width: 42px;
+        height: 42px;
     }
 
     .btn-box {
@@ -476,6 +613,11 @@ img {
     font-size: 4.2rem;
     line-height: 1.3;
     margin-bottom: 2rem;
+    background: linear-gradient(135deg,#ffffff 0%,#bfefff 35%,var(--main-color) 70%,#0ea5e9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: .5px;
 }
 
 .about-content h2 span{
@@ -483,9 +625,9 @@ img {
 }
 
 .about-content p{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: var(--paragraph);
-    line-height: 1.9;
+    line-height: 1.8;
     margin-bottom: 2rem;
 }
 
@@ -557,6 +699,12 @@ img {
 
     .about-info{
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .info-box {
+        width: 100%;
+        padding: 2rem;
     }
 
 }
@@ -564,6 +712,14 @@ img {
 /* How we work section */
 .services {
     background: var(--bg-secondary);
+}
+
+.section-title h2 {
+    background: linear-gradient(135deg,#ffffff 0%,#bfefff 35%,var(--main-color) 70%,#0ea5e9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: .5px;
 }
 
 .more {
@@ -651,8 +807,6 @@ img {
     box-shadow: 0 10px 30px rgba(56,189,248,.35);
 }
 
-
-
 /* Headings styling */
 .service-box h3 {
     font-size: 2.3rem;
@@ -729,6 +883,11 @@ img {
     font-weight: 700;
     color: var(--text-color);
     margin-bottom: 2rem;
+    background: linear-gradient(135deg,#ffffff 0%,#bfefff 35%,var(--main-color) 70%,#0ea5e9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: .5px;
 }
 
 .skills-left p {
@@ -1127,6 +1286,11 @@ button:hover {
 .contact-text h2 {
     font-size: 4em;
     margin-bottom: 2rem;
+    background: linear-gradient(135deg,#ffffff 0%,#bfefff 35%,var(--main-color) 70%,#0ea5e9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: .5px;
 }
 
 .contact-text p {
@@ -1206,6 +1370,11 @@ footer {
 footer h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    background: linear-gradient(135deg,#ffffff 0%,#bfefff 35%,var(--main-color) 70%,#0ea5e9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: .5px;
 }
 
 footer p {
@@ -1302,11 +1471,10 @@ footer p {
 }
 
 /*================ Back To Top ================*/
-
 .back-to-top{
     position: fixed;
-    right: 2.5rem;
-    bottom: 2.5rem;
+    right: 20px;
+    bottom: 20px;
     width: 55px;
     height: 55px;
     background: var(--main-color);
@@ -1431,4 +1599,3 @@ animation:float 6s ease-in-out infinite;
         flex-direction: column;
     }
 }
-
