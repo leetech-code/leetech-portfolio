@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
+
     <!--fav-icon-->
      <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+
+    <!--Global Styles-->
     <link rel="stylesheet" href="style.css">
+
+    <!--Header-->
+    <link rel="stylesheet" href="header.css">
+
+    <!--Home-->
+    <link rel="stylesheet" href="home.css">
+
+    <!---Other Sections-->
+    <link rel="stylesheet" href="preloader.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="utilities.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <!--Respondiveness-->
+    <link rel="stylesheet" href="responsive.css">
+
     <!--Font-Awesome-->
     <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -21,7 +45,7 @@
     <!--Header-->
     <header class="header">
         <a href="#home" class="logo">
-            <img src="images/logo.png" alt="leeTech logo">
+            <img src="images/logo.png" alt="leeTech Frontend Developer Logo">
             <span class="brand">lee<span>Tech</span></span>
         </a>
 
@@ -29,6 +53,7 @@
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
+          <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -40,288 +65,887 @@
 
     <!--hero section-->
     <section class="home" id="home">
-       <div class="home-content">
-            <h3><span></span>Hi, I'm</h3>
-            <h1>Unyah Idongesit<span>(leeTech)</span></h1>
-            <h2>Building Modern<span>Web Experiences</span><br>
-            </h2>
-            <p>I build responsive, fast, and user-friendly websites that help businesses establish a strong online presence.</p>
-            <div class="btn-box">
-                <a href="#contact">Hire Me</a>
-                <a href="#contact">Contact</a>
-            </div>
-       </div>
+        <div class="container">
+            <div class="home-wrapper">
+                <div class="home-content">
 
-       <div class="home-img">
-        <img src="images/hero-img.png">
-       </div>
+                    <h3>
+                        <span class="status-dots" aria-hidden="true"></span>Frontend Developer • Available for Hire
+                    </h3>
+
+                    <h1>
+                        Idongesit Unyah <span>(leeTech)</span>
+                    </h1>
+                    <h2 class="gradient-title">
+                        Building Modern <br><span>Web Experiences</span>
+                    </h2>
+                    <p>
+                        I design and develop responsive, high-performance websites that help businesses build credibility and connect with their audience.
+                    </p>
+                    <div class="btn-box">
+                        <a href="#contact">Hire Me</a>
+                        <a href="#projects">View Projects</a>
+                    </div>
+
+                </div>
+
+                <div class="home-img">
+                    <img src="images/hero-img.png" alt="Portrait of Unyah Idongesit">
+                </div>
+
+            </div>
+
+        </div>
+           
     </section>
     
-    <!--About Section-->
+    <!--===================
+        About Section
+    ==========================-->
     <section class="about" id="about">
-        <div class="about-img">
-            <img src="images/about.png" alt="Eidongesit Unyah">
-        </div>
+        <div class="container">
+            <div class="about-wrapper">
+                
+                <div class="about-top">
 
-        <div class="about-content">
-            <h5>About Me</h5>
+                    <div class="about-img">
+                        <img src="images/about.png" alt="idongesit Unyah">
+                    </div>
 
-            <h2>
-                Passionate Frontend Developer Creating
-                <span>Modern Web Experiences</span>
-            </h2>
+                   <div class="about-content">
 
-            <p>
-                I'm a frontend developer dedicated to building responsive, accessible, and visually engaging websites. I enjoy turning ideas into interactive digital experiences using modern web technologies and clean, maintainable code.
-            </p>
+                        <span class="badge">About Me</span>
 
-            <p>
-                My goal is to create websites that not only look great but also deliver exceptional performance, seamless user experiences, and lasting value for businesses and individuals.
-            </p>
+                        <h2 class="gradient-title">
+                            Passionate Frontend Developer
+                            <span>
+                                Creating Modern Web Experiences
+                            </span>
+                        </h2>
 
-           <div class="about-info">
+                        <p>
+                            I'm a frontend developer dedicated to building responsive, accessible, and visually engaging websites. I enjoy turning ideas into interactive digital experiences using modern web technologies and clean, maintainable code.
+                        </p>
 
-                <div class="info-box">
-                    <h3>🧠 Clean Code</h3>
-                    <span>Writing organized, maintainable, and scalable code using modern frontend practices.</span>
+                        <p>
+                            My goal is to create websites that not only look great but also deliver exceptional performance, seamless user experiences, and lasting value for businesses and individuals.
+                        </p>
+
+                    </div>    
+
                 </div>
 
-                <div class="info-box">
-                    <h3>📱 Responsive Design</h3>
-                    <span>Creating websites that adapt beautifully across desktops, tablets, and mobile devices.</span>
+                <div class="about-info">
+
+                    <div class="info-box card">
+                        <h3>
+                            <i class="fa-solid fa-code" aria-hidden="true"></i>Clean Code
+                        </h3>
+
+                        <p>
+                            Writing organized, maintainable, and scalable code using modern frontend practices.
+                        </p>
+
+                    </div>
+
+                    <div class="info-box card">
+
+                        <h3>
+                            <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>Responsive Design
+                        </h3>
+                        
+                        <p>
+                            Creating responsive layouts that provide a seamless experience across desktops, tablets, and mobile devices.
+                        </p>
+                   
+                    </div>      
+
+                    <div class="info-box card">
+                
+                        <h3>
+                            <i class="fa-solid fa-bolt" aria-hidden="true"></i>Performance
+                        </h3>
+
+                        <p>
+                            Optimizing websites for speed, accessibility, and smooth user experiences.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div class="info-box">
-                    <h3>⚡ Performance</h3>
-                    <span>Optimizing websites for speed, accessibility, and a smooth user experience.</span>
+                <div class="about-btn">
+                    <a href="#contact" class="btn">Let's Talk</a>
                 </div>
 
             </div>
-            <a href="#contact" class="btn">Let's Talk</a>
+
         </div>
 
     </section>
 
-    <!--services-->
+    <!--==================
+        My Process Section
+    =====================-->
     <section class="services" id="services">
-       <div class="section-title">
-            <h2>What I Can Help You Build</h2>
-            <p>Every successful project starts with understanding your goals. Here's how I transform ideas into fast, responsive, and user-focused websites.</p>
-       </div>
+
+        <div class="container">
+
+            <div class="services-wrapper">
+
+                <!--Section Heading-->
+                <div class="section-title">
+
+                    <span class="badge">My Process</span>
+
+                    <h2 class="gradient-title">
+                        How I Build Modern Experiences
+                    </h2>
+
+                    <p> 
+                        From planning and design to development and launch, I follow a clear process to create fast, responsive, and user-focused web experiences that help businesses grow.
+                    </p>
+
+                </div>
        
-       <div class="service-container">
+                <!--Process Grid-->
+                <div class="services-container">
 
-            <div class="service-box">
-               <i class="fa-solid fa-comments"></i>
-               <h3>Discovery & Planning</h3>
+                    <!--Process 1-->
+                    <article class="service-box card">
 
-               <p>
-                    Every successful project begins with understanding your goals and identifying the best solution for your business...
+                        <span class="service-number">01</span>
 
-                <span class="dots">....</span>
+                        <div class="service-top">
 
-                <span class="more">
-                    Before writing a single line of code, I take time to understand your objectives, target audience, and brand identity. This planning stage helps create a clear roadmap, ensuring the final product meets your expectations and solves real problems.
-                </span>
-               </p>
+                            <div class="service-icon">
 
-               <a href="#" class="readMoreBtn">Read More</a>
+                                <i class="fa-solid fa-comments" aria-hidden="true"></i>
+
+                            </div>
+
+                            <h3>Discovery & Planning</h3>
+
+                        </div>    
+
+                        <p>
+                            Every successful project begins with understanding your goals, audience, and the best solution for your business.
+
+                            <span class="dots">...</span>
+
+                            <span class="more">
+                            I take time to understand your objectives, target audience, and brand identity before development begins. This creates a clear roadmap and ensures the final product aligns with your goals.
+                            </span>
+                        </p>
+
+                        <button 
+                        type="button" 
+                        class="readMoreBtn" 
+                        aria-expanded="false">
+                            Read More
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+
+                    </article>
+
+                    <!--Process 2-->
+                    <article class="service-box card">
+
+                        <span class="service-number">02</span>
+
+                        <div class="service-top">
+
+                            <div class="service-icon">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                            </div>
+
+                            <h3>Design & Development</h3>
+                        </div>
+
+                        <p>
+                            I design clean, responsive interfaces and build them using modern frontend technologies and best practices.
+
+                        <span class="dots">...</span>
+
+                        <span class="more">
+                            Every interface is built with clean, maintainable code while prioritizing responsiveness, accessibility, performance, and scalability for future growth.
+                        </span>
+                        </p>
+                
+                        <button 
+                        type="button" 
+                        class="readMoreBtn" 
+                        aria-expanded="false">
+                            Read More
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+
+                    </article>
+           
+                    <!--Process 3-->
+                    <article class="service-box card">
+
+                        <span class="service-number">03</span>
+
+                        <div class="service-top">
+
+                            <div class="service-icon">
+                                <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                            </div>
+
+                            <h3>Testing & Launch</h3>
+
+                        </div>
+
+                        <p>
+                        Before every project goes live, I carefully test every feature to ensure everything works perfectly.
+
+                        <span class="dots">...</span>
+
+                        <span class="more">
+                            I test responsiveness, optimize performance, improve accessibility, and resolve any issues before deployment so your website delivers a smooth experience from day one.
+                        </span>
+
+                        </p>
+
+                        <button 
+                        type="button" 
+                        class="readMoreBtn" 
+                        aria-expanded="false">
+                            Read More
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+
+                    </article>
+
+                </div>
+
             </div>
 
-            <div class="service-box">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <h3>Design & Development</h3>
-                <p>
-                    I design clean, responsive interfaces and develop them using modern frontend technologies...
+        </div>
 
-                   <span class="dots">.....</span>
-
-                   <span class="more">
-                    I focus on writing clean, maintainable code while building interfaces that look great on desktops, tablets, and mobile devices. Every component is created with usability, accessibility, and long-term scalability in mind.
-                   </span>
-                </p>
-                <a href="#" class="readMoreBtn">Read More</a>
-            </div>
-
-            <div class="service-box">
-                <i class="fa-solid fa-lightbulb"></i>
-                <h3>Testing & Launch</h3>
-                <p>
-                    Before delivery, every project undergoes thorough testing to ensure quality and performance...
-
-                    <span class="dots">....</span>
-
-                    <span class="more">
-                       I test websites across different browsers and screen sizes, optimize loading speed, and fix usability issues before deployment. This ensures visitors enjoy a fast, reliable, and consistent experience from day one.
-                    </span>
-                </p>
-                <a href="#" class="readMoreBtn">Read More</a>
-            </div>
-       </div>
     </section>
 
     <!--skills section-->
-    <section class="skills">
-       <div class="skills-left">
-            <h2>Skills & Expertise</h2>
-            <p>I build modern web experiences with a focus on performance, usability, and clean code.</p>
+    <section class="skills" id="skills">
 
-            <div class="experience">
-                <div>
-                   <h3>4</h3>
-                   <span>Satisfied Client</span>
-                </div>
-            </div>
-       </div>
+        <div class="container">
 
-       <div class="skills-right">
-            <div class="skill-card">
-                <i class="fa-solid fa-code"></i>
-                <div>
-                    <h3>💻 Frontend Development</h3>
-                    <p>Building responsive and interactive websites using HTML5, CSS3, JavaScript, and React while following modern development best practices.</p>
-                </div>
-            </div>
+            <div class="skills-wrapper">
 
-            <div class="skill-card">
-                <i class="fa-solid fa-laptop-code"></i>
-                <div>
-                    <h3>📱 Responsive UI/UX</h3>
-                    <p>Designing interfaces that adapt seamlessly across desktops, tablets, and mobile devices while providing an intuitive user experience.</p>
-                </div>
-            </div>
+                <!--Left Content-->
+                <div class="skills-left">
 
-            <div class="skill-card">
-                <i class="fa-solid fa-gauge-high"></i>
-                <div>
-                    <h3>⚡ Performance & Optimization</h3>
-                    <p>Improving website speed, accessibility, SEO, and overall performance through clean code, optimized assets, and efficient loading techniques.</p>
-                </div>
-            </div>
+                    <span class="badge">Skills & Expertise</span>
 
-            <div class="skill-card">
-                <i class="fa-brands fa-github"></i>
-                <div>
-                    <h3>🛠 Version Control Card</h3>
-                    <p>Managing projects efficiently with Git and GitHub to maintain clean workflows and collaboration.</p>
+                    <h2 class="gradient-title">
+                        The Tools Behind My Work
+                    </h2>
+
+                    <p>
+                        I specialize in creating responsive, accessible, and high-performing websites using modern frontend technologies. Every project is built with clean code, scalability, and user experience at its core.
+                    </p>
+
+                    <div class="experience">
+
+                        <div class="experience-box">
+
+                            <h3>2+</h3>
+
+                            <span>
+                                Years Building Responsive Websites
+                            </span>
+
+                            <small>
+                                HTML • CSS • JavaScript • React • Git
+                            </small>
+
+                        </div>
+
+                    </div>
+
                 </div>
-            </div>
-       </div>
+
+
+                <!--Skill Cards-->
+                <div class="skills-right">
+
+                    <!-- Frontend Development -->
+                    <article class="skill-card card">
+
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+
+                        <div>
+                            <h3>Frontend Development</h3>
+
+                            <p>
+                                Building responsive and interactive websites using HTML5, CSS3, JavaScript, and React while following modern development best practices.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!-- Responsive Design -->
+                    <article class="skill-card card">
+
+                        <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+
+                        <div>
+                            <h3>Responsive UI Design</h3>
+
+                            <p>
+                                Crafting layouts that adapt seamlessly across desktops, tablets, and mobile devices while delivering a consistent and intuitive user experience.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Performance -->
+                    <article class="skill-card card">
+
+                        <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+
+                        <div>
+                            <h3>Performance & Optimization</h3>
+
+                            <p>
+                                Improving speed, accessibility, SEO, and overall performance through efficient code and optimized assets.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!--Git-->
+                    <article class="skill-card card">
+
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        <div>
+
+                            <h3>Git & Version Control</h3>
+
+                            <p>
+                                Using Git and GitHub to manage projects, track changes, maintain clean workflows, and support collaboration.
+                            </p>
+                        
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div> 
+
+        </div>  
+
     </section>
 
     <!--Project section-->
     <section class="projects" id="projects">
-        <div class="section-title">
-            <h2>Featured Projects</h2>
-            <p>A selection of projects that demonstrate my approach to responsive design, clean code, and user-focused development.</p>
-        </div>
+        <div class="container">
+            <div class="projects-wrapper">
 
-        <div class="project-container">
-            <div class="project-box">
-                <img src="images/project.png" alt="Online Store">
+                <header class="section-title">
 
-                <div class="project-overlay">
-                    <span>Frontend Development</span>
-                    <h3>Online Store</h3>
-                    <p> Responsive eCommerce website built with HTML, CSS and JavaScript.</p>
-                    <div class="project-links">
-                        <a href="">Live Demo</a>
+                    <h5 class="badge">
+                        Portfolio
+                    </h5>
 
-                        <a href="https://github.com/leetech-code/" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
-                    </div>
+                    <h2 class="gradient-title">
+                        Featured Projects
+                    </h2>
 
-                </div>
+                    <p>
+                        A selection of projects that showcase my ability to build modern, responsive, and high-performance web applications using current frontend technologies and best practices.
+                    </p>
 
-            </div>
+                </header>
 
-            <div class="project-box">
-                <img src="images/project.png" alt="Tip Calculator">
+                <div class="project-container">
+
+                    <article class="project-box" id="kiateka-project">
+
+                        <div class="project-image">
+
+                            <!-- Project Image -->
+                            <img src="images/kiateka.png" alt="Kiateka authentication interface" loading="lazy">
+
+                        </div>
+
+                        <!--Mobile Toggle-->
+                        <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-1">
+
+                            <span>
+                                Kiateka Authentication
+                            </span>
+
+                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+
+                        </button>
+
+                        <!--Mobile Details-->
+                        <div class="project-details" id="project-1">
+
+                            <span class="project-tag">
+                                React Frontend Interface
+                            </span>
+
+                            <!-- Tech Stack -->
+                            <div class="project-stack">
+                                <span>React</span>
+                                <span>Vite</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>React Icon</span>
+                            </div>
+
+                            <p>
+                                A modern authentication interface built with React and Vite, featuring a clean responsive layout, password visibility controls, remember-me functionality, password recovery, and Google sign-in integration.
+                            </p>
+
+                            <!-- Project Links -->
+                            <div class="project-links">
+                                <a href="https://login-page-seven-virid.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View Kiateka Authentication live demo">
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo
+                                </a>
+
+                                <a href="https://github.com/leetech-code/login_page.git" target="_blank" rel="noopener noreferrer" aria-label="View Kiateka Authentication source code on GitHub">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i>View Code
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Desktop Overlay -->
+                        <div class="project-overlay">
+
+                            <span class="project-tag">
+                                React Frontend Interface
+                            </span>
+
+                            <h3 class="gradient-title">
+                                Kiateka Authentication Interface
+                            </h3>
+
+                            <!--Tech Stack-->
+                            <div class="project-stack">
+                                <span>React</span>
+                                <span>Vite</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>React Icon</span>
+                            </div>
+
+                            <p>
+                                A modern authentication interface built with React and Vite, featuring a clean responsive layout, password visibility controls, remember-me functionality, password recovery, and Google sign-in integration.
+                            </p>
+
+                            <!-- Project Links -->
+                            <div class="project-links">
+                                <a href="https://login-page-seven-virid.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View Kiateka Authentication live demo">
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo
+                                </a>
+
+                                <a href="https://github.com/leetech-code/login_page.git" target="_blank" rel="noopener noreferrer" aria-label="View Kiateka Authentication source code on GitHub">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i>View Code
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="project-box" id="tip-calculator">
+
+                        <div class="project-image">
+
+                            <!-- Project Image -->
+                            <img src="images/project.png" 
+                            alt="Responsive tip calculator interface" 
+                            loading="lazy">
+
+                        </div>
            
-                <div class="project-overlay">
-                    <span>Frontend Development</span>
-                    <h3>Tips Calculator</h3>
-                    <p>HTML • CSS • JavaScript • Responsive</p>
+                        <!--Mobile Toggle-->
+                        <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-2">
 
-                    <div class="project-links">
-                        <a href="">Live Demo</a>
+                            <span>
+                                Tip Calculator
+                            </span>
 
-                        <a href=""><i class="fa-brands fa-github"></i>Github</a>
+                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+
+                        </button>
+
+                        <!--Mobile Details-->
+                        <div class="project-details" id="project-2">
+
+                            <span class="project-tag">
+                                Responsive Website
+                            </span>
+
+                            <!-- Tech Stack -->
+                            <div class="project-stack">
+
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+
+                            </div>
+
+                            <p>
+                                A responsive tip calculator that performs real-time calculations while delivering a clean and intuitive user experience.
+                            </p>
+
+                            <!-- Project Links -->
+                            <div class="project-links">
+
+                                <a href="https://tip-calculator-ten-phi.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View Tip Calculator live demo">
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo
+                                </a>
+
+                                <a href="https://github.com/leetech-code/tip_calculator.git" target="_blank" rel="noopener noreferrer" aria-label="View Tip Calculator Source Code On GitHub">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i>View Code
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Desktop Overlay -->
+                        <div class="project-overlay">
+
+                            <span class="project-tag">
+                                Responsive Website
+                            </span>
+
+                            <h3 class="gradient-title">
+                                Tip Calculator
+                            </h3>
+
+                            <!--Tech Stack-->
+                            <div class="project-stack">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <p>
+                                A responsive tip calculator that performs real-time calculations while delivering a clean and intuitive user experience.
+                            </p>
+
+                            <!-- Project Links -->
+                            <div class="project-links">
+                                <a href="https://tip-calculator-ten-phi.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View Tip Calculator live demo">
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo
+                                </a>
+
+                                <a href="https://github.com/leetech-code/tip_calculator.git" target="_blank" rel="noopener noreferrer" aria-label="View tip calculator source code on GitHub">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i>View Code
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="project-btn">
+
+                    <a href="https://github.com/leetech-code/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" aria-label="View all leeTech projects on GitHub"> 
+                    View All Projects →
+                    </a>
+
+                </div> 
+        
+            </div>
+            
+        </div>    
+
+    </section>
+
+    <!-- ===========================
+        Contact Section
+    =========================== -->
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="contact-wrapper">  
+
+                <!--Section Heading-->
+                <header class="contact-heading">
+
+                    <h5 class="badge">
+                        Contact
+                    </h5>
+
+                    <h2 class="gradient-title">
+                        Let's Build Something Great
+                    </h2>
+
+                    <p>
+                        Have a project in mind or looking for a frontend developer? Let's discuss how we can build a fast, responsive, and user-focused website together.
+                    </p>
+
+                </header>
+        
+                <!--Contact Details-->
+                <div class="contact-container">
+
+                    <!--Contact Information-->
+                    <div class="contact-left">
+
+                        <!--Email-->
+                        <div class="contact-item card">
+
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+
+                            <div class="contact-info">
+                                <h4>Email</h4>
+
+                                <a href="mailto:eidongesitunyah@gmail.com">
+                                    eidongesitunyah@gmail.com
+                                </a>
+
+                                <small>
+                                    Or use the contact form to send me a message directly.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <!---Location -->
+                        <div class="contact-item card">
+
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+
+                            <div class="contact-info">
+                                <h4>Location</h4>
+
+                                <span>
+                                    Nigeria · Remote Available
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <!--Availability-->
+                        <div class="contact-item card">
+
+                            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+
+                            <div class="contact-info">
+
+                                <h4>Availability</h4>
+
+                                <span>
+                                    Available for freelance, remote and full-time roles.
+                                </span>
+
+                            </div>
+
+                        </div>
+        
                     </div>
+
+                    <!--Contact Form-->
+                    <div class="contact-right">
+
+                        <form 
+                        id="contact-form"
+                        action="#"
+                        method="post"
+                        autocomplete="on">
+
+                            <!--Name-->
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Name
+                                </label>
+
+                                <input 
+                                type="text" 
+                                id="name"
+                                autocomplete="name" 
+                                name="name" 
+                                placeholder="Enter your name" 
+                                required>
+
+                            </div>
+
+                            <!--Email-->
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email
+                                </label>
+
+                                <input 
+                                type="email" 
+                                id="email"
+                                autocomplete="email" 
+                                name="email" 
+                                placeholder="Enter your email" 
+                                required>
+
+                            </div>
+                            
+                            <!--Subject--> 
+                            <div class="form-group">
+
+                                <label for="subject">
+                                    Subject
+                                </label>
+
+                                <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                placeholder="What is your project about?">
+
+                            </div>
+                            
+                            <!--Message-->
+                            <div class="form-group">
+
+                                <label for="message">
+                                    Message
+                                </label>
+
+                                <textarea 
+                                id="message"
+                                name="message" 
+                                rows="8" 
+                                placeholder="Tell me about your project, goals, and timeline..."
+                                required></textarea>
+
+                            </div>
+                        
+                            <!--Submit Button-->
+                            <button type="submit">
+                                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                                Send Message
+                            </button>
+
+                        </form>
+
+                        <!--Response Time-->
+                        <div class="response-time">
+                            <i class="fa-solid fa-business-time" aria-hidden="true"></i>
+
+                            <span>
+                                Typically responds within 24 hours.
+                            </span>
+
+                        </div>
+
+                    </div>   
+
                 </div>
 
             </div>
 
         </div>
 
-        <div class="project-btn">
-            <a href="#">Load More</a>
-        </div>
     </section>
 
-    <!--contact section-->
-    <section class="contact" id="contact">
-       <div class="contact-text">
-            <h2>Let's Build Something Great</h2>
-            <p>I create responsive websites that are fast, user-friendly, and designed to help businesses establish a strong online presence.</p>
-       </div>
-
-       <form>
-            <input type="text"
-            placeholder="Your Name"
-            required>
-
-            <input type="email"
-            placeholder="Your Email"
-            required>
-
-            <input type="text"
-            placeholder="Subject">
-
-            <textarea rows="7" placeholder="Your Message"></textarea>
-
-            <button type="submit">Send</button>
-       </form>
-    </section>
-
-    <!--footer section-->
+    <!-- ===========================
+        Footer
+    =========================== -->
     <footer class="footer">
-        <div class="footer-content">
-            <h2>Let's Connect</h2>
-            <p>
-                Have a project in mind or just want to say hello?
-                I'd love to hear from you.
-            </p>
-            <a href="mailto:eidongesitunyah@gmail.com" class="footer-email">eidongesitunyah@gmail.com</a>
 
-            <div class="socials">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
+        <div class="container">
+
+            <div class="footer-wrapper">
+
+                <!-- Footer Main Content -->
+                <div class="footer-content">
+
+                    <!--Footer Heading-->
+                    <h5 class="badge">
+                        Thanks for Visiting
+                    </h5>
+
+                    <h2 class="gradient-title">
+                        Let's Work Together
+                    </h2>
+
+                    <!--Footer Description-->
+                    <p class="footer-description">
+                        Let's create something meaningful together. I'm always open to discussing new projects, collaborations, and opportunities.
+                    </p>
+
+                    <!--Email-->
+                    <a href="mailto:eidongesitunyah@gmail.com" class="footer-email">eidongesitunyah@gmail.com</a>
+
+                    <!-- Footer Tagline -->
+                    <p class="footer-tagline">
+                        Crafting responsive websites with clean code and modern design.
+                    </p>
+
+                    <!--Social Links-->
+                    <div class="socials">
+                        
+                        <a href="https://www.facebook.com/profile.php?id=61578954845566" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="facebook"
+                        ><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+
+                        <a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+
+                        <a href="#"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+
+                        <a href="https://github.com/leetech-code" target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visit my GitHub profile"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                    </div>
+
+                    <!--footer Navigation-->
+                    <nav class="footer-nav" aria-label="Footer Navigation">
+
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#services">Services</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+
+                    </nav>
+
+                    <!-- Footer Bottom -->
+                    <div class="footer-bottom">
+                            <p>© 2026 <strong>idongesit Unyah (leeTech)</strong>. All Rights Reserved.</p>
+                    </div>
+
+                </div> 
+            
             </div>
 
-            <!--footer nav-->
-           <nav class="footer-nav">
-                <a href="#home">Home</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-           </nav>
-           <div class="footer-bottom">
-                <p>© 2026 idongesit Unyah. All Rights Reserved.</p>
-           </div>
+        </div>
 
-        </div>   
     </footer>
     <a href="#home" class="back-to-top" id="backToTop">
-    <i class="fa-solid fa-angles-up"></i></a>
+        <i class="fa-solid fa-angles-up" aria-hidden="true"></i>
+    </a>
 
- 
-
-
-
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 
+    <script>
+        emailjs.init({
+            publicKey: "nC7PcIl0svUYvEMPl"
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>

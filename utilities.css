@@ -1,0 +1,74 @@
+/*==============================
+    Back To Top Button
+==============================*/
+.back-to-top{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 58px;
+    height: 58px;
+    background: linear-gradient(
+        135deg,
+        #38bdf8,
+        #0ea5e9);
+    box-shadow: 0 10px 30px rgba(56,189,248, .25);
+    color: #020617;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: 
+    background .35s ease,
+    color .35s ease,
+    transform .35s ease,
+    opacity .35s ease,
+    visibility .35s ease,
+    box-shadow .35s ease;
+    z-index: 1000;
+}
+
+.back-to-top i{
+    transition: .35s;
+}
+
+.back-to-top:hover i{
+    transform: translateY(-2px);
+}
+
+/* Visible State */
+.back-to-top.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Hover Effect */
+.back-to-top:hover{
+    transform: translateY(-6px);
+    background: #111827;
+    color: var(--main-color);
+    border:1px solid var(--main-color);
+}
+
+/*========================= 
+    Scroll Progress 
+============================*/
+.scroll-progress{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg,#38bdf8,#0ea5e9,#38bdf8);
+    background-size: 200% 100%;
+    animation: progressGlow 3s linear infinite;
+    z-index: 9999;
+    box-shadow: 0 0 12px rgba(56,189,248,.5);
+    transition: width .1s linear;
+}

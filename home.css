@@ -1,0 +1,481 @@
+/* ==========================================
+   Hero Section
+========================================== */
+.home{
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-wrapper{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    width: 100%;
+    padding-top: 4rem;
+    z-index: 1;
+}
+
+/* ==========================================
+   Hero Content
+========================================== */
+.home-content {
+    position: relative;
+    z-index: 2;
+    flex: 1 1 60%;
+}
+
+.home-content h3 {
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    padding: .8rem 1.8rem;
+    margin-bottom: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--main-color);
+    background: rgba(56, 189, 248, .08);
+    border: 1px solid rgba(56, 189, 248, .2);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    transition: .35s ease;
+}
+
+.home-content h3:hover {
+    background: rgba(56, 189, 248, .15);
+    border-color: var(--main-color);
+    transform: translateY(-2px);
+}
+
+.status-dots {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    background: var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--main-color);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.home-content h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 1.5rem 0;
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #bfefff 35%,
+        var(--main-color) 70%,
+        #0ea5e9 100%
+        );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 18px rgba(56, 189, 248, .15));
+    letter-spacing: .3px;
+}
+
+.home-content h1 span{
+    display: block;
+    margin-top: .4rem;
+    color: var(--main-color);
+    -webkit-text-fill-color: var(--main-color);
+    font-size: .75em;
+    font-weight: 700;
+}
+
+.home-content h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 1rem 0 2.5rem;
+    color: var(--text-color);
+    letter-spacing: .5px;
+}
+
+.home-content p {
+    font-size: 1.7rem;
+    line-height:1.8;
+    color: var(--paragraph);
+    max-width: 56rem;
+    margin-bottom: 3rem;
+}
+
+/* ==========================================
+   Hero Buttons
+========================================== */
+.btn-box {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    gap: 2rem;
+}
+
+.btn-box a {
+    display: inline-block;
+    padding: 1.4rem 3.8rem;
+    letter-spacing: .3px;
+    border-radius: 14px;
+    border: 1px solid var(--main-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: 
+    background .35s ease,
+    color .35s ease,
+    transform .35s ease,
+    border-color .35s ease;
+}
+
+.btn-box a:first-child {
+    background: rgba(56, 189, 248, .4);
+    color: var(--text-color);
+}
+
+.btn-box a:last-child {
+    background: #111827;
+    color: var(--main-color);
+}
+
+.btn-box a:first-child:hover,
+.btn-box a:last-child:hover {
+    transform: translateY(-4px);
+}
+
+.btn-box a:first-child:hover {
+    background: #111827;
+    color: var(--main-color);
+}
+
+.btn-box a:last-child:hover {
+    background: rgba(56, 189, 248, .4);
+    color: var(--text-color);
+}
+
+
+/* ==========================================
+   Hero Image
+========================================== */
+.home-img {
+    display: flex;
+    flex: 1 1 40%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.home-img img {
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    position: relative;
+    filter: drop-shadow(0 25px 40px rgba(0, 0, 0, .45));
+    z-index: 2;
+    transition: transform .5s ease;
+    border-radius: 20px;
+    box-shadow: 
+    0 0 15px rgba(41,171,226,.2), 
+    0 0 40px rgba(41,171,226,.15);
+}
+
+
+.home-img img:hover{
+    animation-play-state: paused;
+    transform: translateY(-8px) scale(1.04);
+}
+
+/* ==========================================
+   Hero Background Effects
+========================================== */
+.home::before,
+.home::after,
+.home-img::before,
+.home-img::after {
+    pointer-events: none;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(
+        circle, 
+        rgba(56, 189, 248, .35), 
+        transparent 70%
+    );
+    filter: blur(70px);
+    left: -120px;
+    top: 50px;
+}
+
+.home::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(
+        circle, 
+        rgba(14, 165, 233, .18), 
+        transparent 70%
+    );
+    filter: blur(80px);
+    right: -100px;
+    bottom: 20px;
+}
+
+.home::before,
+.home::after {
+    z-index: 0;
+}
+
+.home-img::before{
+    content: "";
+    position: absolute;
+    width: 80px;
+    aspect-ratio: 1;
+    background: radial-gradient(
+        circle,
+        rgba(41,171,226,.45),
+        rgba(41,171,226,.15), 
+        transparent 70%
+    );
+    border-radius: 50%;
+    filter: blur(40px);
+    animation: glow 4s ease-in-out infinite;
+}
+
+.home-img::after{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    width: 220px;
+    height: 25px;
+    background: rgba(0,0,0,.45);
+    border-radius: 50%;
+    filter: blur(18px);
+    animation: shadowFloat 4s ease-in-out infinite;
+}
+
+.home-img img{
+animation: float 6s ease-in-out infinite;
+}
+
+.home-content {
+    animation: fadeUp 1s ease;
+}
+
+.home-img {
+    animation: zoomIn 1.2s ease;
+}
+
+/* =====================================
+   Desktop (1200px and above)
+=====================================*/
+@media (min-width: 1200px){
+    .home-wrapper {
+        gap: 7rem;
+    }
+
+    .home-content h1{
+        font-size: 6.2rem;
+    }
+
+   .home-content h2{
+        font-size: 4.2rem;
+    }
+
+    .home-img img{
+        max-width: 480px;
+    }
+
+}
+
+/* =====================================
+    Small Laptop (992px-1199px)
+=====================================*/
+@media (min-width: 992px) and (max-width: 1199px){
+    .home-wrapper{
+        gap: 4rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-content h2{
+        font-size: 3.3rem;
+    }
+
+    .home-content p {
+        font-size: 1.6rem;
+    }
+
+    .home-img img{
+        max-width: 400px;
+    }
+
+}
+
+/* =====================================
+   Tablet (768px - 991px)
+=====================================*/
+@media(max-width: 991px) {
+    .home-wrapper{
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 4rem;
+        padding-top: 5rem;
+    }
+
+
+    .home-content{
+        width: 100%;
+        text-align: center;
+    }
+
+    .home-content p {
+        max-width: 650px;
+        margin: 0 auto 3rem;
+    }
+
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+
+    .home-content h2 {
+        font-size: 3.2rem;
+    }
+    
+    .home-img img {
+        max-width: 400px;
+    }
+
+    .btn-box  {
+        justify-content: center;
+    }
+}
+
+/* =====================================
+   Large Phones (576px - 767px)
+=====================================*/
+@media(max-width: 767px){
+    #menu-icon {
+        display: block;
+    }
+
+    .home-wrapper {
+        gap: 3rem;
+        padding-top: 3rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.35rem;
+    }
+
+    .home-content h1 {
+        font-size: 3.8rem;
+    }
+
+    .home-content h2 {
+        font-size: 2.6rem;
+    }
+
+    .home-content p {
+        font-size: 1.5rem;
+    }
+
+
+    .home-img img {
+        max-width: 320px;
+    }
+
+    .btn-box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* =====================================
+   Mobile Phones - Below 576px
+=====================================*/
+@media (max-width:575px){
+     .home-wrapper {
+        gap: 2.5rem;
+        padding-top: 2rem;
+    } 
+
+    .home-content h1{
+        font-size: 3.2rem;
+        margin: 1rem 0;
+    }
+
+    .home-content h2{
+        font-size: 2.4rem;
+        line-height: 1.3;
+        margin: 1rem 0 2rem;
+    }
+
+    .home-content h3{
+        padding: .7rem 1.2rem;
+        font-size: 1.2rem;
+        letter-spacing: .4px;
+        line-height: 1.5;
+    }
+
+    .home-content p{
+        font-size: 1.4rem;
+        max-width: 34rem;
+        line-height: 1.7;
+        margin-bottom: 2.5rem;
+    }
+
+    .home-img img{
+        max-width: 280px;
+    }
+
+    .home-img::before {
+        width: 180px;
+    }
+
+    .home-img::after {
+        width: 140px;
+    }
+
+    .btn-box{
+        flex-direction: column;
+        width: 100%;
+        gap: 1.2;
+    }
+
+    .btn-box a{
+        width: 100%;
+    }
+
+}
+
+/* ==========================================
+   Very Small Phones — Below 480px
+========================================== */
+@media(max-width: 480px) {
+    .home-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .home-content h1{
+        font-size: 3rem;
+    }
+
+    .home-img img{
+        max-width: 250px;
+    }
+
+}
+

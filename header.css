@@ -1,0 +1,98 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8rem;
+    padding: 0 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(2,6,23,.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    z-index: 1000;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-color);
+    font-size: 2.6rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo img {
+    height: 4.2rem;
+    width: 4.2rem;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform .35s ease;
+}
+
+.logo:hover img {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.brand {
+    color: var(--text-color);
+}
+
+.brand span {
+    color: var(--main-color);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.navbar a {
+    position: relative;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: 
+    color .35s ease,
+    transform .35s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    transition: width .35s ease;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+    width: 100%;
+}
+
+
+
+#menu-icon {
+    font-size: 2.8rem;
+    color: var(--text-color);
+    display: none;
+    cursor: pointer;
+    transition: color .35s ease,
+    transform .35s ease;
+}
+
+#menu-icon:hover{
+    color: var(--main-color);
+}
