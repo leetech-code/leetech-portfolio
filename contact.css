@@ -355,7 +355,7 @@
     Responsiveness
 ============================*/
 /* Desktop (1200px - 1399px) */
-@media(min-width:1200px) and (max-width:1399px) {
+@media(min-width: 1200px) and (max-width: 1399px) {
     .contact-container{
         grid-template-columns: minmax(0, 1.35fr) minmax(320px, .85fr);
         display: grid;
@@ -371,7 +371,7 @@
 }
 
 /* Small Laptop (992px - 1199px) */
-@media (min-width:992px) and (max-width:1199px){
+@media (min-width: 992px) and (max-width: 1199px){
     .contact-heading {
         max-width: 700px;
         margin-bottom: 4rem;
@@ -410,7 +410,7 @@
 }
 
 /* Tablet (768px - 991px) */
-@media (min-width:768px) and (max-width:991px){
+@media (min-width: 768px) and (max-width: 991px){
     .contact-heading {
         max-width: 600px;
         margin-bottom: 4rem;
@@ -496,7 +496,7 @@
 }
 
 /* Small Mobile (<576px) */
-@media (max-width:575px){
+@media (max-width: 575px){
    .contact-heading {
         margin-bottom: 3rem;
     }

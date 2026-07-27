@@ -89,16 +89,16 @@
 }
 
 .socials a:hover {
-    background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+    background: linear-gradient(135deg,#38bdf8,#0ea5e9);
     color: #020617;
     transform: translateY(-6px);
     box-shadow: 0 12px 25px rgba(56,189,248,.18);
 }
 
 .socials a::before{
-    content:"";
-    position:absolute;
-    inset:0;
+    content: "";
+    position: absolute;
+    inset: 0;
     background:
     radial-gradient(circle,
     rgba(255,255,255,.18),
@@ -181,7 +181,6 @@
 ==========================================*/
 
 @media (min-width: 1200px) and (max-width: 1399px) {
-
     .footer {
         padding: 7rem 7% 3rem;
     }
@@ -192,13 +191,12 @@
     Tablet (768px - 991px)
 ===================================*/
 @media (min-width:768px) and (max-width:991px){
-
     .footer{
-        padding:7rem 6% 3rem;
+        padding: 7rem 6% 3rem;
     }
 
     .footer h2{
-        font-size:3.6rem;
+        font-size: 3.6rem;
     }
 
     .footer-description {
@@ -210,21 +208,20 @@
     }
 
     .socials{
-        gap:1.8rem;
+        gap: 1.8rem;
     }
 }
 
 /*==================================
     Large Mobile (576px - 767px)
 ===================================*/
-@media (min-width:576px) and (max-width:767px){
-
+@media (min-width: 576px) and (max-width: 767px){
     .footer{
-        padding:6rem 5% 3rem;
+        padding: 6rem 5% 3rem;
     }
 
     .footer h2{
-        font-size:3.2rem;
+        font-size: 3.2rem;
     }
 
     .footer-description {
@@ -236,13 +233,13 @@
     }
 
     .footer-nav{
-        gap:2rem;
+        gap: 2rem;
     }
 
     .socials a{
-        width:52px;
-        height:52px;
-        font-size:1.8rem;
+        width: 52px;
+        height: 52px;
+        font-size: 1.8rem;
     }
 
 }
@@ -250,24 +247,24 @@
 /*==================================
     Small Mobile (<576px)
 ===================================*/
-@media (max-width:575px){
+@media (max-width: 575px){
     .footer{
-        padding:6rem 5% 2.5rem;
+        padding: 6rem 5% 2.5rem;
     }
 
     .footer h2{
-        font-size:3rem;
+        font-size: 3rem;
     }
 
     .footer-description {
-        font-size:1.45rem;
+        font-size: 1.45rem;
         line-height: 1.7;
     }
 
     .footer-email{
         max-width: 100%;
-        font-size:1.6rem;
-        word-break:break-word;
+        font-size: 1.6rem;
+        word-break: break-word;
     }
 
     .footer-tagline {
@@ -276,18 +273,18 @@
     }
 
     .footer-nav{
-        flex-direction:column;
-        gap:1.5rem;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     .socials{
-        gap:1.5rem;
+        gap: 1.5rem;
     }
 
     .socials a{
-        width:50px;
-        height:50px;
-        font-size:1.7rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.7rem;
     }
 
     .footer-bottom p {
