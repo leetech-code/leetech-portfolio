@@ -121,6 +121,10 @@
     color: var(--text-color);
 }
 
+.contact-item:hover h4 {
+    color: var(--main-color);
+}
+
 .contact-info {
     min-width: 0;
     display: flex;
