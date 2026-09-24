@@ -1,33 +1,32 @@
 /* =========================
    IMPORTS
 ========================= */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 /*================================
-   Css varriable 
+   Css varriable
 ====================================*/
-:root{
-    --bg-color: #020617;
-    --bg-secondary: #0f172a;
-    --card-bg: rgba(15,23,42,.75);
+:root {
+  --bg-color: #020617;
+  --bg-secondary: #0f172a;
+  --card-bg: rgba(15, 23, 42, 0.75);
 
-    --text-color: #f8fafc;
-    --paragraph: #94a3b8;
+  --text-color: #f8fafc;
+  --paragraph: #94a3b8;
 
-    --main-color: #38bdf8;
-    --main-hover: #0ea5e9;
+  --main-color: #38bdf8;
+  --main-hover: #0ea5e9;
 
-    --border: rgba(255,255,255,.08);
+  --border: rgba(255, 255, 255, 0.08);
 
-    --shadow: 0 15px 40px rgba(15,23,42,.35);
-    --glow: 0 0 35px rgba(56,189,248,.30);
+  --shadow: 0 15px 40px rgba(15, 23, 42, 0.35);
+  --glow: 0 0 35px rgba(56, 189, 248, 0.3);
 
-    --radius: 20px;
-    --section-gap: 6rem;
-    --card-padding: 3.2rem;
-    --heading-spacing: 2rem;
+  --radius: 20px;
+  --section-gap: 6rem;
+  --card-padding: 3.2rem;
+  --heading-spacing: 2rem;
 }
-
 
 /* =========================
    GLOBAL RESET
@@ -35,160 +34,148 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* =========================
    Html And Body
 ========================= */
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    scroll-padding-top: 9rem;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
 }
 
 body {
-    min-height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
-    font-family: "Poppins", sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 /* =========================
    Global Element Defaults
 ========================= */
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 ul,
 ol {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 button,
 input,
 textarea {
-    font: inherit;
+  font: inherit;
 }
 
 /* ================================
-    Global Layout   
+    Global Layout
 =================================*/
 section {
-    padding: 10rem 9% 2rem;
-    width: 100%;
+  padding: 10rem 9% 2rem;
+  width: 100%;
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
 
 /* =========================
    Reusable Components
 ========================= */
 .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    backdrop-filter: blur(18px);
-    transition: .35s ease;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(18px);
+  transition: 0.35s ease;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(56,189,248,.3);
-    box-shadow: var(--shadow);
+  transform: translateY(-8px);
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: var(--shadow);
 }
 
-.badge{
-    display: inline-block;
-    padding: .8rem 1.8rem;
-    margin-bottom: 2rem;
-    border-radius: 999px;
-    background: rgba(56,189,248,.08);
-    border: 1px solid rgba(56,189,248,.18);
-    color: var(--main-color);
-    font-size: 1.45rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    transition: .35s;
+.badge {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  margin-bottom: 2rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  color: var(--main-color);
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.35s;
 }
 
-.badge:hover{
-    transform: translateY(-3px);
-    border-color: var(--main-color);
-    background: rgba(56,189,248,.14);
+.badge:hover {
+  transform: translateY(-3px);
+  border-color: var(--main-color);
+  background: rgba(56, 189, 248, 0.14);
 }
 
-.gradient-title{
-    background:linear-gradient(
-        135deg,
-        #fff,
-        #cdefff,
-        var(--main-color)
-    );
+.gradient-title {
+  background: linear-gradient(135deg, #fff, #cdefff, var(--main-color));
 
-    background-clip: text;
-    -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-background-clip: text;
 
-    color: transparent;
-    -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 /* =========================
    SECTION TITLE
 ========================= */
 .section-title {
-    max-width: 700px;
-    margin: 0 auto 3rem;
-    text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
 }
 
 .section-title h2 {
-    font-size: 4.5rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
-    line-height: 1.2;
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  line-height: 1.2;
 }
 
-
 .section-title p {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: var(--paragraph);
-    max-width: 650px;
-    margin: 0 auto;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--paragraph);
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 .socials a:active,
-.back-to-top:active{
-    transform: scale(.95);
+.back-to-top:active {
+  transform: scale(0.95);
 }
 
 .footer-email:focus-visible,
 .socials a:focus-visible,
 .footer-nav a:focus-visible,
-.back-to-top:focus-visible{
-    outline: 2px solid var(--main-color);
-    outline-offset: 4px;
+.back-to-top:focus-visible {
+  outline: 2px solid var(--main-color);
+  outline-offset: 4px;
 }
-
-
-
-
-
